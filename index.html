@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e6f79984b0.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+      </script>
+</head>
+
+<body>
+    <div id="loading-container">
+        <div class="loading-spinner"></div>
+        <p>Loading...</p>
+    </div>
+    <h1 class="Try">Try Searching</h1>
+    <div class="container">
+        <div class="main">
+
+            <div class="intro">
+                <div class="box b1">
+                    <p>Best Restaurants in India</p>
+                </div>
+
+                <div class="box">
+                    <p>Tell me a joke</p>
+                </div>
+
+                <div class="box">
+                    <p>Latest Movies</p>
+                </div>
+                <div class="box">
+                    <p>What is AI?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottomInput">
+        <p contenteditable="true" class="input">
+        </p>
+        <div class="send">
+            <i class="fa-solid fa-paper-plane" class="" contenteditable="false"></i>
+        </div>
+    </div>
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>

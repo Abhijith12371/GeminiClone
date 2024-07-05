@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(57, 57, 57);
+}
+
+.container {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 80vh;
+    margin: 5%;
+    top: 10px;
+}
+
+.bottomInput {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    bottom: 15px;
+}
+
+.bottomInput p {
+    width: 70%;
+    background-color: white;
+    padding: 12px;
+}
+
+.bottomInput i {
+    cursor: pointer;
+    color: white;
+}
+
+.AbhiChat {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: rgb(100, 98, 98);
+    width: 100vw;
+    min-height: 10vh;
+    padding: 12px;
+    margin-top: 12px;
+    color: white;
+}
+
+.AbhiChat img {
+    position: fixed;
+    display: block;
+    height: 50px;
+    transform: rotate(-5deg);
+    clip-path: circle();
+}
+
+.AbhiChat p {
+    color: white;
+    margin: 0 60px;
+}
+
+.userChat {
+    background: grey;
+    padding: 15px;
+    color: white;
+    margin-top: 12px;
+}
+
+.chat-message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-message,
+.bot-message {
+    display: flex;
+    align-items: center;
+}
+
+.user-message img,
+.bot-message img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-message p {
+    background-color: #DCF8C6;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+}
+
+.bot-message pre {
+    background-color: #000;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    min-width: 70%;
+    position: relative;
+}
+
+.bot-message p {
+    background-color: #E0E0E0;
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 70%;
+    margin: 5%;
+    position: relative;
+}
+
+.bot-message pre .copy-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: #555;
+}
+
+.bot-message pre .copy-button:hover {
+    color: #333;
+}
+
+.language-javascript {
+    
+    margin-bottom: 18px;
+    font-weight: bolder;
+}
+
+.box {
+    width: 15em;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: white;
+    margin: 12px;
+    border: 2px solid white;
+    position: relative;
+}
+
+.intro {
+    width: 74%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 12px;
+    gap: 16px;
+    cursor: pointer;
+}
+
+@keyframes Decorate {
+    0% {
+        border-color: aqua;
+        width: 20%;
+    }
+    50% {
+        border-color: blue;
+        width: 25%;
+    }
+    100% {
+        border-color: aqua;
+        width: 20%;
+    }
+}
+
+.box::before {
+    content: '';
+    top: -50%;
+    left: -50%;
+    width: 370px;
+    height: 450px;
+    background: linear-gradient(60deg, rgba(255, 255, 255, 0), #45ffb8, #45f3ff);
+    transform-origin: bottom right;
+    position: absolute;
+    animation: rotateBorder 6s linear infinite;
+}
+
+.box::after {
+    content: '';
+    top: -50%;
+    left: -50%;
+    width: 370px;
+    height: 450px;
+    background: linear-gradient(60deg, rgba(255, 255, 255, 0), #45ffda, #ff7745);
+    transform-origin: bottom right;
+    position: absolute;
+    animation: rotateBorder 6s linear infinite;
+    animation-delay: -3s;
+}
+
+.main {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotating-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    animation: rotateText 10s linear infinite;
+    transform-origin: center center;
+}
+
+
+@keyframes rotateText {
+    0% {
+        transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+}
+
+
+@keyframes rotateBorder {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+.box {
+    width: 15em;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: white;
+    margin: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Added shadow effect */
+    background: linear-gradient(45deg, #ff00dd, #00ffdd, #ff00dd, #00ffdd, #ff00dd);
+    background-size: 200% 100%;
+    animation: animateGradient 10s linear infinite, waveMotion 4s ease-in-out infinite alternate; /* Added animation for gradient and box motion */
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #00ffdd, #ff00dd, #00ffdd, #ff00dd, #00ffdd);
+    background-size: 200% 100%;
+    animation: animateGradient 10s linear infinite; /* Added animation for gradient */
+    z-index: -1;
+    opacity: 0.5; /* Adjust opacity to make the overlay more subtle */
+}
+
+@keyframes animateGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes waveMotion {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.main {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Try{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+    margin-top: 12px;
+    color: white;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.container {
+    perspective: 1000px; /* Adjust the perspective value to control the depth of the 3D effect */
+}
+
+.box {
+    width: 15em;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: white;
+    margin: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #ff00dd, #00ffdd, #ff00dd, #00ffdd, #ff00dd);
+    background-size: 200% 100%;
+    animation: animateGradient 10s linear infinite, waveMotion 3s ease-in-out infinite alternate, fadeIn 10s ease-in-out infinite; /* Added animation for gradient, box motion, and floating effect */
+    transform-style: preserve-3d; /* Ensure that child elements are rendered in a 3D space */
+}
+
+.box p{
+    font-weight: bolder;
+    z-index: 999999;
+}
+
+@keyframes fadeIn {
+    0%{
+        padding: 0px;
+        /* transition: all 2s ease-in; */
+    }
+    100%{
+        padding: 2px;
+        transition: all 5s ease-in;
+    }
+    
+}
+
+
+.b1:hover{
+    animation: none;
+}
+
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateZ(200px); /* Start from a distance */
+    }
+    50% {
+        transform: translateZ(100px); /* Move closer */
+    }
+    100% {
+        transform: translateZ(200px); /* Return to initial position */
+    }
+}
+
+
+#loading-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Custom Prism.js style for black background */
+code[class*=language-], pre[class*=language-] {
+    background-color: black;
+    color: white; /* Text color */
+    padding: 20px; /* Add padding for better readability */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); Add a subtle shadow for depth */
+    font-family: 'Roboto Mono', monospace; /* Use a monospace font for consistent character width */
+    font-size: 14px; /* Adjust font size as needed */
+    line-height: 1.5; /* Adjust line height for better readability */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+/* Optional: Adjust the color of code block line numbers */
+.line-numbers {
+    color: rgba(255, 255, 255, 0.5); /* Adjust the line numbers color if needed */
+}
+
+.language-javascript{
+    
+}
+
+@media (max-width:500px) {
+    code[class*=language-], pre[class*=language-] {
+        display: block;
+    /* overflow: inherit; */
+    /* display: flow; */
+    width: 265px;
+    overflow: scroll;
+    
+    }
+}

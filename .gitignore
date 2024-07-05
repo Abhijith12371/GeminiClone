@@ -1,0 +1,7 @@
+/node_modules/
+/node_modules/dotenv
+
+*.jpg
+*.png
+package.json
+readme.md
